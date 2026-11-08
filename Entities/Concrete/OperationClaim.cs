@@ -1,6 +1,9 @@
 ﻿using Core.Entities.Abstract;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace Core.Entities.Concrete
+namespace Entities.Concrete
 {
     public class OperationClaim : IEntity
     {

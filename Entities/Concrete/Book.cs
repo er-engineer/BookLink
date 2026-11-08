@@ -8,15 +8,15 @@ namespace Entities.Concrete
     public class Book : IEntity
     {
         public Guid Id { get; set; } = Guid.NewGuid();
+        public int CategoryId { get; set; }
 
-        public string? Isbn { get; set; }
-
+        public string? ISBN { get; set; }
         public string Title { get; set; } = string.Empty;
         public string Author { get; set; } = string.Empty;
         public string? PublishDate { get; set; }
         public string? CoverImageUrl { get; set; }
 
-        //true: from open library api, false: from user
+        //true: added and verified from open library api, false: added from user
         public bool IsVerified { get; set; } = false;
 
         //if the book is added by user, this field will be filled with the user id

@@ -14,6 +14,7 @@ namespace Entities.Concrete
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
+        //Security
         public bool IsEmailVerified { get; set; } = false;
         public bool IsPhoneVerified { get; set; } = false;
         public bool IsAnonymous { get; set; } = false;
