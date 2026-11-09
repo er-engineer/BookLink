@@ -23,7 +23,10 @@ namespace Business.DependencyResolvers.Autofac
             builder.RegisterType<BookManager>().As<IBookService>().SingleInstance();
             builder.RegisterType<EfBookDal>().As<IBookDal>().SingleInstance();
 
+            builder.RegisterType<AuthManager>().As<IAuthService>().SingleInstance();
+            builder.RegisterType<JwtHelper>().As<ITokenHelper>().SingleInstance();
 
+            builder.RegisterType<EfUserCredentialDal>().As<IUserCredentialDal>().SingleInstance();
 
             var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 

@@ -1,0 +1,2 @@
+1- When adding a new user, the default operation claim should be assigned to the user. 
+

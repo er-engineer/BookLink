@@ -3,11 +3,12 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Entities.DTOs
+namespace Entities.DTOs
 {
-    public class UserToLoginDto : IDto
+    public class UserForLoginDto : IDto
     {
-        public string Email { get; set; }
+        public Guid Id { get; set; }
+        public string UsernameOrEmail { get; set; }
         public string Password { get; set; }
     }
 }
