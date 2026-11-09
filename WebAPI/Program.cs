@@ -1,4 +1,8 @@
 
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Business.DependencyResolvers.Autofac;
+
 namespace WebAPI
 {
     public class Program
@@ -14,7 +18,13 @@ namespace WebAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+            builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+            builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+            {
+                containerBuilder.RegisterModule(new AutofacBusinessModule());
+            });
+
+
             builder.Services.AddOpenApi();
 
             var app = builder.Build();

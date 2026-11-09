@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Core.Entities.Abstract;
 
-namespace Entities.DTOs
+namespace Core.Entities.DTOs
 {
-    public class UserToRegisterDto
+    public class UserToRegisterDto : IDto
     {
         public string Email { get; set; }
         public string Username { get; set; }

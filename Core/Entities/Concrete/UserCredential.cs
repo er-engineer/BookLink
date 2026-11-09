@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Entities.Concrete
+namespace Core.Entities.Concrete
 {
     public class UserCredential : IEntity
     {
@@ -12,6 +12,6 @@ namespace Entities.Concrete
         public string PasswordHash { get; set; }
         public string PasswordSalt { get; set; }
         public DateTimeOffset CreatedAt { get; set; } = DateTimeOffset.UtcNow;
-        public DateTimeOffset UpdatedAt { get; set; } 
+        public DateTimeOffset UpdatedAt { get; set; }
     }
 }
